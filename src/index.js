@@ -4,12 +4,13 @@ var cors = require ("cors");
 var path = require ("path");
 var glob = require ("glob");
 var bodyParser = require ("body-parser");
-
+const swaggerUi = require('swagger-ui-express');
+const swaggerDocument = require('./swagger.json');
 const app = express();
 app.use(bodyParser.urlencoded({
     extended: true
 }));
-
+app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname, '../src/Upload')));
 app.use(cors());
