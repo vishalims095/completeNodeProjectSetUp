@@ -39,7 +39,7 @@
     "qr-image": "^3.2.0",
     "qrcode": "^1.2.0",
     "shortid": "^2.2.12",
-    "socket.io": "^2.1.1",
+    "socket.io": "^2.5.0",
     "swagger-ui-express": "^4.1.6",
     "twilio": "^3.17.4",
     "typeof": "^1.0.0",
